@@ -1,0 +1,23 @@
+{
+  "name": "ex-05-access-components-use-refs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "python -m SimpleHTTPServer 4000",
+    "watch": "npm run build -- --watch",
+    "build": "webpack --config=.//webpack.js --progress"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "react": "^0.13.3"
+  },
+  "dependencies": {
+    "babel-core": "^5.4.3",
+    "babel-loader": "^5.1.2",
+    "node-libs-browser": "^0.5.0",
+    "react-tools": "^0.13.3",
+    "webpack": "^1.9.7"
+  }
+}

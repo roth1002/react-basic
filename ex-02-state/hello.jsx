@@ -5,8 +5,17 @@ var Hello = React.createClass({
 		return { name : 'Roth' };
 	},
 
-    render: function() {
-        return <div>Hello {this.props.name + ' ' + this.state.name }</div>;
+	update: function (e) {
+		this.setState( {name : e.target.value} );
+	},
+
+    render: function () {
+        return (
+        	<div>
+        		<input type="text" onChange={this.update} />
+        		<h1>Hello {this.props.name + ' ' + this.state.name }</h1>
+        	</div>
+        )
     }
 });
 

@@ -42,7 +42,7 @@ var App = React.createClass({
 
 	getInitialState: function () {
 		return {
-			people: this.props.people.splice(0)
+			people: this.props.people.splice(0) //copy of this.props.people
 		}
 	},
 
