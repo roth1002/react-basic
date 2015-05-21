@@ -19,3 +19,4 @@ npm start
 - ex-03: python simple http server lists for state props
 - ex-04: python simple http server lists for delete state object
 - ex-05: python simple http server + access components by using refs
+- ex-06: python simple http server + stores
