@@ -1,5 +1,5 @@
 var React = require('react');
-
+var deletePerson;
 var people = [
 	{
 		'name': '帥哥釗',
@@ -47,20 +47,22 @@ var App = React.createClass({
 	},
 
 	deletePerson: function (person) {
+    console.log(this)
 		this.state.people.splice(this.state.people.indexOf(person), 1);
 		this.setState({ people: this.state.people });
 	},
 
 	render: function () {
-		var that = this;
 
 		return (
 			<div>
 				{this.state.people.map(function (person) {
+          deletePerson = this.deletePerson
+          var wtf = this.deletePerson.bind(null, person)
 					return (
-						<Card onClick={that.deletePerson.bind(null, person)} name={person.name} email={person.email}></Card>
+						<Card onClick={wtf} name={person.name} email={person.email}></Card>
 					)
-				})}
+				}, this)}
 
 			</div>
 		)
@@ -68,3 +70,9 @@ var App = React.createClass({
 });
 
 React.render(<App people={people}></App>, document.body);
+
+var a = deletePerson.bind(null, people[0]);
+var b = deletePerson.bind('tim', people[1]);
+a();b()
+console.log(1111);
+

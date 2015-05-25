@@ -47,7 +47,7 @@
 	'use strict';
 
 	var React = __webpack_require__(78);
-
+	var deletePerson;
 	var people = [{
 		'name': '帥哥釗',
 		'email': 'roth1002@gmail.com',
@@ -108,24 +108,31 @@
 		},
 
 		deletePerson: function deletePerson(person) {
+			console.log(this);
 			this.state.people.splice(this.state.people.indexOf(person), 1);
 			this.setState({ people: this.state.people });
 		},
 
 		render: function render() {
-			var that = this;
 
 			return React.createElement(
 				'div',
 				null,
 				this.state.people.map(function (person) {
-					return React.createElement(Card, { onClick: that.deletePerson.bind(null, person), name: person.name, email: person.email });
-				})
+					deletePerson = this.deletePerson;
+					var wtf = this.deletePerson.bind(null, person);
+					return React.createElement(Card, { onClick: wtf, name: person.name, email: person.email });
+				}, this)
 			);
 		}
 	});
 
 	React.render(React.createElement(App, { people: people }), document.body);
+
+	var a = deletePerson.bind(null, people[0]);
+	var b = deletePerson.bind('tim', people[1]);
+	a();b();
+	console.log(1111);
 
 /***/ },
 /* 1 */
