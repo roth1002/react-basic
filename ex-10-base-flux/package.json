@@ -1,0 +1,28 @@
+{
+  "name": "rfd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^2.9.25",
+    "flux": "^2.0.3",
+    "koa": "^0.20.0",
+    "koa-static": "^1.4.9",
+    "object-assign": "^2.0.0",
+    "react": "^0.13.3",
+    "superagent": "^1.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^5.4.5",
+    "babel-loader": "^5.1.3",
+    "css-loader": "^0.13.1",
+    "node-libs-browser": "^0.5.0",
+    "style-loader": "^0.12.2",
+    "webpack": "^1.9.7"
+  }
+}

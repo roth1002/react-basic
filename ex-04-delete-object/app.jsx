@@ -1,5 +1,4 @@
 var React = require('react');
-
 var people = [
 	{
 		'name': '帥哥釗',
@@ -52,19 +51,19 @@ var App = React.createClass({
 	},
 
 	render: function () {
-		var that = this;
 
 		return (
 			<div>
 				{this.state.people.map(function (person) {
 					return (
-						<Card onClick={that.deletePerson.bind(null, person)} name={person.name} email={person.email}></Card>
+						<Card onClick={this.deletePerson.bind(null, person)} name={person.name} email={person.email}></Card>
 					)
-				})}
+				}, this)}
 
 			</div>
 		)
 	}
 });
 
-React.render(<App people={people}></App>, document.body);
+React.render(<App people={people} />, document.body);
+
