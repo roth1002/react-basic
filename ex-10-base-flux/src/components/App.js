@@ -13,10 +13,10 @@ function getPersonFromStore() {
 
 var App =  React.createClass({
   componentWillMount() {
-    console.log('will mount')
+    console.log('will mount App')
   },
   componentDidMount() {
-    console.log('DidMount')
+    console.log('DidMount App')
     PersonStore.onChange(this._onChange)
   },
   componentDidUnmount() {

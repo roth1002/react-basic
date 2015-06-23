@@ -4,10 +4,10 @@ var React = require('react');
 
 var Person =  React.createClass({
   componentWillReceiveProps() {
-    console.log('receive props')
+    console.log('receive props Person')
   },
   componentWillUpdate() {
-    console.log('will update')
+    console.log('will update Person')
   },
   getDefaultProps() {
     return {

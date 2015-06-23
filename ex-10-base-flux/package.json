@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run watch& npm run server",
+    "watch": "npm run build -- --watch",
+    "build": "webpack --config=webpack.config.js --progress",
+    "server": "node --harmony app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bluebird": "^2.9.25",
     "flux": "^2.0.3",
+    "html-webpack-plugin": "^1.5.2",
     "koa": "^0.20.0",
     "koa-static": "^1.4.9",
     "object-assign": "^2.0.0",

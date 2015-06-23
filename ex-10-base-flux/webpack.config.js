@@ -1,5 +1,5 @@
 var webpack = require('webpack')
-
+var HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   devtool: 'eval-source-map',
@@ -8,15 +8,15 @@ module.exports = {
 
   output: {
     path: __dirname + '/public/',
-    filename: 'bundle.[hash].js'
+    filename: 'bundle-[hash].js'
   },
 
   module: {
     loaders: [
 
       { test: /\.css$/, loader: 'style!css' },
-      { test: /\.jsx$/, loader: 'babel-loader?stage=0' },
-      { test: /\.js$/, loader: 'babel-loader?stage=0' }
+      { test: /\.jsx$/, loader: 'babel-loader?stage=0', exclude: [/node_modules/, /vendor/] },
+      { test: /\.js$/, loader: 'babel-loader?stage=0', exclude: [/node_modules/, /vendor/] }
     ]
   },
   resolve: {
@@ -28,6 +28,7 @@ module.exports = {
       compress: {
         warnings: false
       }
-    })
+    }),
+    new HtmlWebpackPlugin()
   ]
 }

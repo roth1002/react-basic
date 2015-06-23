@@ -21,3 +21,5 @@ npm start
 - ex-05: python simple http server + access components by using refs
 - ex-06: python simple http server + stores
 - ex-07: python simple http server + flux (Undone)
+
+- ex-10: KOA server + flux
