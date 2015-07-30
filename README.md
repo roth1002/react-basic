@@ -1,4 +1,4 @@
-# startLearnReactFlux
+# react-basic
 
 It is for practicing React/Flux
 
