@@ -26,7 +26,7 @@
     "extract-text-webpack-plugin": "^0.8.0",
     "flux": "^2.0.3",
     "install": "^0.1.8",
-    "jquery": "^2.1.4",
+    "jquery": "^3.5.1",
     "koa": "^0.20.0",
     "koa-logger": "^1.2.2",
     "koa-route": "^2.4.1",
