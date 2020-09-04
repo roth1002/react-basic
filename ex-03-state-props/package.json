@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "react": "^0.13.3"
+    "react": "^16.13.1"
   },
   "dependencies": {
     "babel-core": "^5.4.3",
