@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "react": "^0.13.3"
+    "react": "^16.13.1"
   },
   "dependencies": {
     "autoprefixer-core": "^5.1.11",
